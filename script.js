@@ -147,33 +147,21 @@ document.addEventListener("DOMContentLoaded", () => {
               mode: 'no-cors',
               body: formData
           })
-          // Dentro del .then() de la llamada fetch en script.js
-        .then(response => response.json()) // Parsear la respuesta JSON
-        .then(data => {
-        if (data.result === 'success') {
-            mensajeCompra.textContent = '¡Compra realizada con éxito! Redirigiendo...';
-            mensajeCompra.style.display = 'block';
-            formularioComprador.reset();
-            asientosSeleccionadosArray = [];
-            totalPrecio = 0;
-            actualizarResumen();
-            // Opcional: Redirigir a una página de confirmación
-            // setTimeout(() => window.location.href = 'pagina-de-confirmacion.html', 2000);
-        } else if (data.result === 'error') {
-            mensajeCompra.textContent = data.message; // Mostrar el mensaje de error del servidor
-            mensajeCompra.style.display = 'block';
-            // Opcional: Puedes deseleccionar los asientos que fallaron en la selección visualmente
-            // Por ejemplo, podrías iterar sobre asientosSeleccionadosArray y remover la clase 'seleccionado'
-        } else {
-            mensajeCompra.textContent = 'Ocurrió un error inesperado.';
-            mensajeCompra.style.display = 'block';
-        }
-        })
-        .catch(error => {
-        console.error('Error al enviar los datos:', error);
-        mensajeCompra.textContent = 'Hubo un error al procesar tu compra. Inténtalo de nuevo más tarde.';
-        mensajeCompra.style.display = 'block';
-        });
+          .then(response => {
+              mensajeCompra.textContent = '¡Compra realizada con éxito! Redirigiendo...';
+              mensajeCompra.style.display = 'block';
+              formularioComprador.reset();
+              asientosSeleccionadosArray = [];
+              totalPrecio = 0;
+              actualizarResumen();
+              // Opcional: Redirigir a una página de confirmación
+              // setTimeout(() => window.location.href = 'pagina-de-confirmacion.html', 2000);
+          })
+          .catch(error => {
+              console.error('Error al enviar los datos:', error);
+              mensajeCompra.textContent = 'Hubo un error al procesar tu compra. Inténtalo de nuevo más tarde.';
+              mensajeCompra.style.display = 'block';
+          });
       });
   });
 });
