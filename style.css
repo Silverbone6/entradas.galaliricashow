@@ -317,3 +317,70 @@ display: block;
     margin-bottom: 10px;
     color: #333;
   }
+  .formulario-datos {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.formulario-datos h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.formulario-datos div {
+    margin-bottom: 15px;
+}
+
+.formulario-datos label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.formulario-datos input[type="text"] {
+    width: calc(100% - 12px); /* Ajuste para el padding */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box; /* Important para que el padding no aumente el ancho */
+    font-size: 16px;
+}
+
+.formulario-datos button[type="submit"] {
+    background-color: #007bff; /* Un color azul */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-datos button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.formulario-datos #mensaje-compra {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.formulario-datos #mensaje-compra.exito {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.formulario-datos #mensaje-compra.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
