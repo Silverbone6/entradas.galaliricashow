@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Evento para el formulario de datos del comprador
       const formularioComprador = document.getElementById('datos-comprador-form');
       const mensajeCompra = document.getElementById('mensaje-compra');
-      const scriptURL = 'LA_URL_DE_TU_APLICACIÓN_WEB'; // Reemplaza con tu URL de Apps Script
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzG37GiS92HTUq_ECJHy_wp_DAQ6dNV5mH6QHiO4rZyeR9u86IjBn6r_KwWHNVBpu1zfA/exec';
 
       formularioComprador.addEventListener('submit', function(event) {
           event.preventDefault();
