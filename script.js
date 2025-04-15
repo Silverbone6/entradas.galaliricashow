@@ -1,5 +1,5 @@
 async function obtenerAsientosBloqueados() {
-  const url = "https://script.google.com/macros/s/AKfycbzG37GiS92HTUq_ECJHy_wp_DAQ6dNV5mH6QHiO4rZyeR9u86IjBn6r_KwWHNVBpu1zfA/exec";
+  const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSxuublP5rJG030HLHQY_7nZ8p1JWhKjFUrhDZxSM3Xk_dVQRHFPUBT9prBh-vGYhwWrr3FROUlqmmA/pub?output=csv";
   const response = await fetch(url);
   const data = await response.text();
 
