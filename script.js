@@ -19,7 +19,7 @@ async function obtenerAsientosBloqueados() {
   }
   
   async function verificarAsientosDisponibles(asientosSeleccionados) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzG37GiS92HTUq_ECJHy_wp_DAQ6dNV5mH6QHiO4rZyeR9u86IjBn6r_KwWHNVBpu1zfA/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz4xnBmQ1O4yRe-0KR4fmAwYSrTM6vqrvj3LrfARYlhogaECl-y6bm5IIzzCzDmH8cDfw/exec';
     const params = new URLSearchParams();
     params.append('action', 'checkAvailability');
     params.append('asientos', JSON.stringify(asientosSeleccionados));
@@ -137,7 +137,7 @@ async function obtenerAsientosBloqueados() {
       // Evento para el formulario de datos del comprador
       const formularioComprador = document.getElementById('datos-comprador-form');
       const mensajeCompra = document.getElementById('mensaje-compra');
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzG37GiS92HTUq_ECJHy_wp_DAQ6dNV5mH6QHiO4rZyeR9u86IjBn6r_KwWHNVBpu1zfA/exec';
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbz4xnBmQ1O4yRe-0KR4fmAwYSrTM6vqrvj3LrfARYlhogaECl-y6bm5IIzzCzDmH8cDfw/exec';
   
       formularioComprador.addEventListener('submit', async function(event) {
         event.preventDefault();
